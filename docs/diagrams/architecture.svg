@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420">
+  <defs>
+    <linearGradient id="sb1" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#6a1b9a"/><stop offset="100%" style="stop-color:#ab47bc"/></linearGradient>
+    <linearGradient id="sb2" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#1565c0"/><stop offset="100%" style="stop-color:#42a5f5"/></linearGradient>
+    <linearGradient id="sb3" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#2e7d32"/><stop offset="100%" style="stop-color:#66bb6a"/></linearGradient>
+    <linearGradient id="sb4" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#c62828"/><stop offset="100%" style="stop-color:#ef5350"/></linearGradient>
+    <filter id="s"><feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.15"/></filter>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#555"/></marker>
+  </defs>
+  <style>
+    @keyframes flow{0%{stroke-dashoffset:20}100%{stroke-dashoffset:0}}
+    @keyframes fadeIn{0%{opacity:0;transform:translateX(-10px)}100%{opacity:1;transform:translateX(0)}}
+    @keyframes money{0%,100%{fill:#2e7d32}50%{fill:#66bb6a}}
+    .flow{stroke-dasharray:10 10;animation:flow 1s linear infinite}
+    .s1{animation:fadeIn 0.4s ease 0.1s both}.s2{animation:fadeIn 0.4s ease 0.3s both}
+    .s3{animation:fadeIn 0.4s ease 0.5s both}.s4{animation:fadeIn 0.4s ease 0.7s both}
+    .s5{animation:fadeIn 0.4s ease 0.9s both}.cash{animation:money 2s ease infinite}
+  </style>
+  <text x="450" y="30" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#333">SaaS Billing — Subscription + Metering Pipeline</text>
+  <!-- Customer -->
+  <g class="s1"><rect x="30" y="150" width="130" height="70" rx="10" fill="url(#sb1)" filter="url(#s)"/><text x="95" y="183" text-anchor="middle" font-family="Arial" font-size="13" fill="white" font-weight="bold">Customer</text><text x="95" y="200" text-anchor="middle" font-family="Arial" font-size="10" fill="#e1bee7">Subscribe/Pay</text></g>
+  <!-- Stripe -->
+  <g class="s2"><rect x="210" y="130" width="140" height="110" rx="10" fill="url(#sb2)" filter="url(#s)"/><text x="280" y="165" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold">Stripe</text><text x="280" y="188" text-anchor="middle" font-family="Arial" font-size="10" fill="#bbdefb">Subscriptions</text><text x="280" y="205" text-anchor="middle" font-family="Arial" font-size="10" fill="#bbdefb">Invoicing</text><text x="280" y="222" text-anchor="middle" font-family="Arial" font-size="10" fill="#bbdefb">Webhooks</text></g>
+  <!-- Metering -->
+  <g class="s3"><rect x="400" y="130" width="140" height="110" rx="10" fill="#fff3e0" stroke="#ff9800" stroke-width="2" filter="url(#s)"/><text x="470" y="165" text-anchor="middle" font-family="Arial" font-size="14" fill="#e65100" font-weight="bold">Metering</text><text x="470" y="188" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">Usage Tracking</text><text x="470" y="205" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">Rate Limits</text><text x="470" y="222" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">Overage Calc</text></g>
+  <!-- Dunning -->
+  <g class="s4"><rect x="590" y="150" width="130" height="70" rx="10" fill="url(#sb4)" filter="url(#s)"/><text x="655" y="183" text-anchor="middle" font-family="Arial" font-size="13" fill="white" font-weight="bold">Dunning</text><text x="655" y="200" text-anchor="middle" font-family="Arial" font-size="10" fill="#ffcdd2">Retry + Notify</text></g>
+  <!-- Revenue -->
+  <g class="s5"><rect x="770" y="150" width="110" height="70" rx="10" fill="url(#sb3)" filter="url(#s)"/><text x="825" y="178" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold" class="cash">R$$</text><text x="825" y="200" text-anchor="middle" font-family="Arial" font-size="10" fill="#c8e6c9">Revenue</text></g>
+  <!-- Arrows -->
+  <line x1="160" y1="185" x2="205" y2="185" stroke="#555" stroke-width="2" class="flow" marker-end="url(#arr)"/>
+  <line x1="350" y1="185" x2="395" y2="185" stroke="#555" stroke-width="2" class="flow" marker-end="url(#arr)"/>
+  <line x1="540" y1="185" x2="585" y2="185" stroke="#555" stroke-width="2" class="flow" marker-end="url(#arr)"/>
+  <line x1="720" y1="185" x2="765" y2="185" stroke="#555" stroke-width="2" class="flow" marker-end="url(#arr)"/>
+  <!-- Tiers -->
+  <g class="s5"><rect x="30" y="300" width="850" height="70" rx="8" fill="#f5f5f5" stroke="#e0e0e0"/>
+    <text x="450" y="325" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#333">Concurrent Billing Tiers</text>
+    <text x="140" y="352" text-anchor="middle" font-family="monospace" font-size="11" fill="#6a1b9a">Free: R0/mo</text>
+    <text x="340" y="352" text-anchor="middle" font-family="monospace" font-size="11" fill="#1565c0">Starter: R500/mo</text>
+    <text x="560" y="352" text-anchor="middle" font-family="monospace" font-size="11" fill="#e65100">Pro: R2,000/mo</text>
+    <text x="760" y="352" text-anchor="middle" font-family="monospace" font-size="11" fill="#2e7d32">Enterprise: R8,000/mo</text>
+  </g>
+</svg>
